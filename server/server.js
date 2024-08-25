@@ -18,8 +18,8 @@ app.use(cors())
 app.use(cookieParser())
 
 app.use('/api/auth', authRoute)
-app.use('/api/product', protectRoute, productRoute)
-app.use('/api/category', protectRoute, categoryRoute) 
+app.use('/api/product', productRoute)
+app.use('/api/category', categoryRoute) 
 app.use('/api/cart', protectRoute, cartRoute) 
 app.use('/api/wishlist', protectRoute, wishlistRoute) 
 
