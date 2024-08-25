@@ -125,8 +125,8 @@ exports.login = async (req, res) => {
 
 exports.logout = async (req, res) => {
   try {
-    res.clearCookie("jwt-ott");
-    res.status(200).json({ status: true, message: "successfully logout" });
+    res.clearCookie("jwt-store");
+    res.status(204).send();
   } catch (error) {
     console.error(error);
     res.status(500).json({ status: false, message: "Server error" });
