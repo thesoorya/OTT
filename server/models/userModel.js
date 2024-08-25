@@ -19,7 +19,11 @@ const user = new mongoose.Schema({
         type: String,
         default: ''
     },
-    searchHistory: {
+    wishList: {
+        type: Array,
+        default: []
+    },
+    cart: {
         type: Array,
         default: []
     },
