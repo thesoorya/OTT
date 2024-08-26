@@ -132,3 +132,12 @@ exports.logout = async (req, res) => {
     res.status(500).json({ status: false, message: "Server error" });
   }
 };
+
+exports.authCheck = async (req, res) => {
+  try {
+    res.status(200).json({ success: true, user: req.user })
+  }
+  catch (error) {
+    res.status(500).json({ success: false, message: 'Server error' })
+  }
+}
