@@ -6,7 +6,7 @@ const BackBar = () => {
   return (
     <div className="backbar">
       <div className="logo">
-        <Link to="/">Logo</Link>
+        <Link to="/">wizard</Link>
       </div>
     </div>
   );
