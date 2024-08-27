@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
@@ -6,6 +6,7 @@ import { useAuthStore } from "../Store/AuthUser";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
   const navigate = useNavigate();
   const { user, logout } = useAuthStore();
 
@@ -17,10 +18,14 @@ const Navbar = () => {
     logout();
   };
 
+  const toggleDropdown = () => {
+    setDropdown(!dropdown);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">
-        <Link to="/">Logo</Link>
+        <Link to="/">wizard</Link>
       </div>
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
         <Link to="/">Home</Link>
@@ -30,9 +35,9 @@ const Navbar = () => {
             Logout
           </span>
         ) : (
-          <>
-            <Link to="/login" className="login-btn">Login</Link>
-          </>
+          <Link to="/login" className="login-btn">
+            Login
+          </Link>
         )}
       </div>
       <div className="hamburger" onClick={toggleMenu}>

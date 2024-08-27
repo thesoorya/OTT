@@ -2,14 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #191815;
+  background-color: #1D1814;
   padding: 10px 20px;
   text-transform: uppercase;
   position: relative;
 }
 
 .logo a {
-  color: #fbfbfb;
+  color: #f5f5e9;
   text-decoration: none;
   font-size: 24px;
   font-weight: bold;
@@ -22,7 +22,7 @@
   position: absolute;
   top: 50px;
   right: 0;
-  background-color: #191815;
+  background-color: #1D1814;
   width: 100%;
   max-height: 0;
   overflow: hidden;
@@ -36,7 +36,7 @@
 .nav-links a,
 .nav-links .logout-btn {
   cursor: pointer;
-  color: #fbfbfb;
+  color: #f5f5e9;
   padding: 10px;
   text-decoration: none;
   width: 100%;
@@ -46,7 +46,7 @@
 
 .nav-links .logout-btn {
   background-color: #0056b3;
-  color: #fbfbfb;
+  color: #f5f5e9;
   border-radius: 5px;
   margin: 10px 0;
   display: inline-block;
@@ -59,7 +59,7 @@
 .signup-btn,
 .login-btn {
   background-color: #0056b3;
-  color: #fbfbfb;
+  color: #f5f5e9;
   padding: 10px 20px;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -75,7 +75,7 @@
 .hamburger {
   display: block;
   font-size: 24px;
-  color: #fbfbfb;
+  color: #f5f5e9;
   cursor: pointer;
 }
 

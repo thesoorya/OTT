@@ -7,9 +7,9 @@
   font-family: "Satoshi", sans-serif;
 }
 body{
-  color: #1d1814;
+  color: #1D1814;
   background-color: #f5f5e9;
-  /*e72267*/
+  min-height: 100vh;
 }
 h1,
 h2,
