@@ -1,7 +1,7 @@
 // src/components/Signup.js
 import React, { useState } from 'react';
 import './auth.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../../components/Store/AuthUser';
 import BackBar from '../../components/BackBar/BackBar';
 
@@ -9,12 +9,13 @@ function Signup() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate()
 
   const { register } = useAuthStore();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    register({ username, email, password });
+    register({ username, email, password }, navigate);
   };
 
   return (

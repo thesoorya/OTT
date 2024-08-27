@@ -1,19 +1,19 @@
-// src/components/Login.js
 import React, { useState } from 'react';
 import './auth.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../../components/Store/AuthUser';
 import BackBar from '../../components/BackBar/BackBar';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate()
 
   const { login } = useAuthStore();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    login({ email, password });
+    login({ email, password }, navigate);
   };
 
   return (

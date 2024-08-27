@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom'
 
 export const useAuthStore = create((set) => ({
     user: null,
@@ -10,11 +11,14 @@ export const useAuthStore = create((set) => ({
     isLoggingout: false,
 
     // Register user
-    register: async (credentials) => {
+    register: async (credentials, navigate) => {
         set({ isSigning: true });
         try {
             const response = await axios.post('/api/auth/register', credentials);
             set({ user: response.data.user, isSigning: false });
+            if (response.data.success) {
+                navigate('/')
+            }
             toast.success('Account created successfully');
         } catch (error) {
             toast.error(error?.response?.data?.message || 'Registration failed');
@@ -23,11 +27,14 @@ export const useAuthStore = create((set) => ({
     },
 
     // Login user
-    login: async (credentials) => {
+    login: async (credentials, navigate) => {
         set({ isLogging: true });
         try {
             const response = await axios.post('/api/auth/login', credentials);
             set({ user: response.data.user, isLogging: false });
+            if (response.data.success) {
+                navigate('/')
+            }
             toast.success('Login successful');
         } catch (error) {
             toast.error(error?.response?.data?.message || 'Login failed');
