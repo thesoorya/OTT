@@ -1,0 +1,31 @@
+.productCard {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 90%;
+  text-align: left;
+  margin: 10px;
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.productName {
+  font-size: 18px;
+  margin: 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.productPrice {
+  font-size: 16px;
+  color: #333;
+}
+
+.productCategory {
+  font-size: 14px;
+  color: #777;
+}

@@ -2,7 +2,7 @@ const { fetchFromAPI } = require('../services/storeApi')
 
 exports.getProducts = async (req, res) => {
     try {
-        const data = await fetchFromAPI('https://api.escuelajs.co/api/v1/products')
+        const data = await fetchFromAPI(' https://api.escuelajs.co/api/v1/products?offset=0&limit=30')
 
         res.status(200).json({ success: true, content: data })
     }
