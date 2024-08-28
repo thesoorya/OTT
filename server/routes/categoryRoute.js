@@ -3,6 +3,6 @@ const { getCategories, getCategoryById } = require("../controllers/categoryContr
 const router = express.Router()
 
 router.get('/getcategories', getCategories)
-router.get('/getcategorybyid/:id', getCategoryById)
+router.get('/getcategorybyid/:query', getCategoryById)
 
 module.exports = router

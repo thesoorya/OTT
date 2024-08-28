@@ -2,7 +2,7 @@ const { fetchFromAPI } = require('../services/storeApi')
 
 exports.getCategories = async (req, res) => {
     try {
-        const data = await fetchFromAPI('https://api.escuelajs.co/api/v1/categories')
+        const data = await fetchFromAPI('https://fakestoreapi.com/products/categories')
 
         res.status(200).json({ success: true, content: data })
     }
@@ -13,10 +13,10 @@ exports.getCategories = async (req, res) => {
 
 exports.getCategoryById = async (req, res) => {
 
-    const { id } = req.params
+    const { query } = req.params
 
     try {
-        const data = await fetchFromAPI(` https://api.escuelajs.co/api/v1/categories/${id}`)
+        const data = await fetchFromAPI(`https://fakestoreapi.com/products/category/${query}`)
 
         res.status(200).json({ success: true, content: data })
     }
