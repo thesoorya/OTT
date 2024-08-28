@@ -12,8 +12,11 @@ const Home = () => {
   const [displayProduct, setDisplayProduct] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  console.log(user);
+  
+
   useEffect(() => {
-    axios.get("/api/product/getproducts")
+    axios.get(`/api/product/getproducts`)
       .then((res) => {
         setDisplayProduct(res.data.content || []);
         setIsLoading(false);
