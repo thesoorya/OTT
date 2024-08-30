@@ -22,8 +22,11 @@
   right: 20px;
   font-size: 24px;
   cursor: pointer;
+  z-index: 999;
 }
 .productPageImageContainer img {
+  position: relative;
+  z-index: -999;
   width: 80%;
   height: 80%;
   object-fit: contain;
