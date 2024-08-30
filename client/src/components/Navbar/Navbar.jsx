@@ -18,10 +18,6 @@ const Navbar = () => {
     logout();
   };
 
-  const toggleDropdown = () => {
-    setDropdown(!dropdown);
-  };
-
   return (
     <nav className="navbar">
       <div className="logo">
@@ -29,6 +25,7 @@ const Navbar = () => {
       </div>
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
         <Link to="/">Home</Link>
+        <Link to="/wishlist">Wishlist</Link>
         <Link to="/cart">Cart</Link>
         {user ? (
           <span onClick={handleLogout} className="logout-btn">
